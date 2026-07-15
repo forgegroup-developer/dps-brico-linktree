@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="DPS Brico: ferramenta e fai da te a Mirabella Eclano. Shop, WhatsApp, telefono e mappa." />
-  <meta name="theme-color" content="#052F11" />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="DPS Brico | Link" />
   <meta property="og:description" content="Ferramenta e fai da te online da oltre 20 anni." />
   <meta property="og:image" content="logo.png" />
@@ -17,17 +17,16 @@
   <style>
     :root {
       --green: #4CB050;
-      --green-light: #69c46d;
+      --green-light: #6bc56f;
+      --green-soft: #e8f7e9;
       --green-dark: #052F11;
-      --green-mid: #1a5c2a;
-      --navy: #031a0a;
-      --navy-soft: #0a2e14;
-      --text: #f8f9fa;
-      --text-muted: rgba(248, 249, 250, 0.72);
-      --card: rgba(255, 255, 255, 0.08);
-      --card-hover: rgba(255, 255, 255, 0.14);
-      --border: rgba(255, 255, 255, 0.12);
-      --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      --bg: #ffffff;
+      --bg-soft: #f7faf7;
+      --text: #0f1a12;
+      --text-muted: #4a5a4e;
+      --card: #ffffff;
+      --border: #d8e8da;
+      --shadow: 0 4px 18px rgba(5, 47, 17, 0.08);
       --radius: 16px;
       --max-width: 480px;
     }
@@ -44,7 +43,7 @@
 
     body {
       font-family: "DM Sans", system-ui, -apple-system, sans-serif;
-      background: var(--navy);
+      background: var(--bg);
       color: var(--text);
       min-height: 100dvh;
       line-height: 1.5;
@@ -56,18 +55,12 @@
       inset: 0;
       z-index: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(76, 176, 80, 0.28), transparent 60%),
-        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(5, 47, 17, 0.55), transparent 50%),
-        linear-gradient(180deg, #031a0a 0%, #0a2e14 50%, #052F11 100%);
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(76, 176, 80, 0.12), transparent 55%),
+        linear-gradient(180deg, #ffffff 0%, #f7faf7 100%);
     }
 
     .bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.5;
-      pointer-events: none;
+      display: none;
     }
 
     .page {
@@ -97,12 +90,7 @@
     }
 
     .logo-glow {
-      position: absolute;
-      inset: 18% 8%;
-      background: radial-gradient(ellipse at center, rgba(76, 176, 80, 0.35), transparent 70%);
-      filter: blur(18px);
-      z-index: 0;
-      animation: logo-glow 4s ease-in-out infinite;
+      display: none;
     }
 
     .logo-card {
@@ -113,11 +101,10 @@
       justify-content: center;
       width: min(300px, 90vw);
       padding: 1.15rem 1.5rem;
-      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+      background: #ffffff;
+      border: 1px solid var(--border);
       border-radius: 20px;
-      box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow);
     }
 
     .logo-card::before {
@@ -125,7 +112,7 @@
       position: absolute;
       inset: -2px;
       border-radius: 22px;
-      background: linear-gradient(135deg, var(--green-light), var(--green), var(--green-dark));
+      background: linear-gradient(135deg, var(--green-light), var(--green));
       z-index: -1;
     }
 
@@ -161,10 +148,10 @@
     }
 
     .profile .tagline {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 500;
-      color: rgba(248, 249, 250, 0.88);
-      max-width: 280px;
+      color: var(--text);
+      max-width: 300px;
       margin: 0 auto 0.85rem;
       line-height: 1.45;
       letter-spacing: -0.01em;
@@ -175,12 +162,12 @@
       align-items: center;
       gap: 0.35rem;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--green-light);
-      background: rgba(76, 176, 80, 0.12);
-      border: 1px solid rgba(76, 176, 80, 0.3);
+      color: var(--green-dark);
+      background: var(--green-soft);
+      border: 1px solid var(--border);
       padding: 0.3rem 0.75rem;
       border-radius: 999px;
     }
@@ -198,17 +185,15 @@
       gap: 0.85rem;
       width: 100%;
       padding: 1rem 1.15rem;
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: var(--green-light);
+      border: 1px solid var(--green);
       border-radius: var(--radius);
-      color: var(--text);
+      color: var(--green-dark);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.975rem;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      font-weight: 700;
+      font-size: 1rem;
       box-shadow: var(--shadow);
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
       animation: fadeUp 0.6s ease both;
     }
 
@@ -222,10 +207,10 @@
     .link-btn:nth-child(8) { animation-delay: 0.4s; }
 
     .link-btn:hover {
-      background: var(--card-hover);
-      border-color: rgba(76, 176, 80, 0.45);
+      background: var(--green);
+      color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 24px rgba(76, 176, 80, 0.28);
     }
 
     .link-btn:active {
@@ -233,13 +218,15 @@
     }
 
     .link-btn.primary {
-      background: linear-gradient(135deg, var(--green), var(--green-mid));
-      border-color: transparent;
+      background: var(--green);
+      border-color: var(--green);
+      color: #ffffff;
     }
 
     .link-btn.primary:hover {
-      background: linear-gradient(135deg, var(--green-light), var(--green));
-      border-color: transparent;
+      background: #3d9a41;
+      border-color: #3d9a41;
+      color: #ffffff;
     }
 
     .link-icon {
@@ -250,11 +237,16 @@
       align-items: center;
       justify-content: center;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(5, 47, 17, 0.08);
+      color: inherit;
     }
 
     .link-btn.primary .link-icon {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .link-btn:hover .link-icon {
+      background: rgba(255, 255, 255, 0.22);
     }
 
     .link-icon svg {
@@ -271,7 +263,7 @@
     }
 
     .link-arrow {
-      opacity: 0.5;
+      opacity: 0.55;
       font-size: 1.1rem;
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
@@ -282,12 +274,11 @@
     }
 
     .services {
-      background: var(--card);
+      background: var(--bg-soft);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.15rem 1.25rem;
       margin-bottom: 2rem;
-      backdrop-filter: blur(12px);
       animation: fadeUp 0.6s ease 0.45s both;
     }
 
@@ -295,7 +286,8 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--green-light);
+      color: var(--green);
+      font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
@@ -307,8 +299,8 @@
     }
 
     .services li {
-      font-size: 0.875rem;
-      color: var(--text-muted);
+      font-size: 0.9rem;
+      color: var(--text);
       padding-left: 1.1rem;
       position: relative;
     }
@@ -337,17 +329,18 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: var(--card);
+      background: var(--green-soft);
       border: 1px solid var(--border);
-      color: var(--text);
+      color: var(--green-dark);
       text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
 
     .social a:hover {
       transform: translateY(-2px) scale(1.05);
-      background: var(--card-hover);
-      border-color: rgba(76, 176, 80, 0.45);
+      background: var(--green);
+      border-color: var(--green);
+      color: #ffffff;
     }
 
     .social svg {
@@ -362,19 +355,21 @@
     }
 
     .footer .company {
-      font-size: 0.875rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
       margin-bottom: 0.35rem;
     }
 
     .footer p {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
     .footer a {
-      color: var(--green-light);
+      color: var(--green);
+      font-weight: 600;
       text-decoration: none;
     }
 
@@ -384,21 +379,19 @@
 
     .footer .legal {
       margin-top: 1.25rem;
-      font-size: 0.72rem;
-      opacity: 0.7;
+      font-size: 0.75rem;
     }
 
     .credit {
       margin-top: 1.5rem;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      opacity: 0.75;
     }
 
     .credit a {
-      color: var(--green-light);
+      color: var(--green);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .credit a:hover {
@@ -415,7 +408,7 @@
     .partners-label {
       display: block;
       font-size: 0.7rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--text-muted);
@@ -427,18 +420,19 @@
       align-items: center;
       justify-content: center;
       background: #ffffff;
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 0.85rem 1.25rem;
       max-width: 240px;
       width: 100%;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
     }
 
     .partners-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 8px 24px rgba(76, 176, 80, 0.18);
     }
 
     .partners-card img {
