@@ -160,7 +160,7 @@
     .profile .tagline {
       font-size: 1.05rem;
       font-weight: 500;
-      color: var(--text);
+      color: var(--green);
       max-width: 300px;
       margin: 0 auto 0.85rem;
       line-height: 1.45;
@@ -425,19 +425,28 @@
       justify-content: center;
       width: 48px;
       height: 48px;
-      border-radius: 50%;
-      background: var(--green);
+      border-radius: var(--radius);
+      background: #ffffff;
       border: 1px solid var(--green);
-      color: #ffffff;
+      color: var(--green);
       text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
     }
 
     .social a:hover {
-      transform: translateY(-2px) scale(1.05);
-      background: var(--green-soft);
-      border-color: var(--border);
-      color: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(76, 176, 80, 0.18);
+    }
+
+    .social a:active,
+    .social a:focus-visible {
+      background: var(--green);
+      border-color: var(--green);
+      color: #ffffff;
+      transform: translateY(0);
+      box-shadow: 0 4px 16px rgba(76, 176, 80, 0.28);
+      outline: none;
     }
 
     .social svg {
