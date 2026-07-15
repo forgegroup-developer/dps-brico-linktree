@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Brico;DPS;;;
+FN:DPS Brico
+ORG:DPS S.r.l
+TITLE:Ferramenta e fai da te
+TEL;TYPE=WORK,VOICE:+390825408020
+item1.TEL;TYPE=CELL:+393392884729
+item1.X-ABLabel:WhatsApp
+EMAIL;TYPE=INTERNET,PREF:store@dpsbrico.it
+ADR;TYPE=WORK:;;Via Nazionale Calore snc;Mirabella Eclano;AV;83036;Italia
+URL;TYPE=WORK:https://www.dpsbrico.it
+item2.URL:https://wa.me/393392884729
+item2.X-ABLabel:WhatsApp
+item3.URL:https://www.kualiti.eu
+item3.X-ABLabel:Shop Kualiti
+NOTE:WhatsApp: +39 339 288 4729 — P.IVA 02711450649
+END:VCARD
