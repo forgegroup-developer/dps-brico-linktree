@@ -231,19 +231,6 @@
       outline: none;
     }
 
-    .link-btn.primary {
-      background: #ffffff;
-      border-color: var(--green);
-      color: var(--green);
-    }
-
-    .link-btn.primary:active,
-    .link-btn.primary:focus-visible {
-      background: var(--green);
-      border-color: var(--green);
-      color: #ffffff;
-    }
-
     .link-icon {
       flex-shrink: 0;
       width: 40px;
@@ -290,7 +277,6 @@
       position: relative;
       overflow: hidden;
       isolation: isolate;
-      margin-top: 0.35rem;
       background: linear-gradient(
         125deg,
         #6fd473 0%,
@@ -305,8 +291,8 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.28);
     }
 
-    .link-btn.shop + .link-btn.shop {
-      margin-top: 0;
+    .link-btn:not(.shop) + .link-btn.shop {
+      margin-top: 0.35rem;
     }
 
     .link-btn.shop::before {
@@ -599,7 +585,7 @@
     </header>
 
     <nav class="links" aria-label="Link principali">
-      <a class="link-btn primary" href="dps-brico.vcf" download="DPS-Brico.vcf">
+      <a class="link-btn shop" href="dps-brico.vcf" download="DPS-Brico.vcf">
         <span class="link-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
         </span>
