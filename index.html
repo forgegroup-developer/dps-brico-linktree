@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="DPS Brico: ferramenta e fai da te a Mirabella Eclano. Shop, WhatsApp, telefono e mappa." />
-  <meta name="theme-color" content="#e85d04" />
+  <meta name="theme-color" content="#052F11" />
   <meta property="og:title" content="DPS Brico | Link" />
   <meta property="og:description" content="Ferramenta e fai da te online da oltre 20 anni." />
   <meta property="og:image" content="logo.png" />
@@ -16,11 +16,12 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --orange: #e85d04;
-      --orange-light: #f48c06;
-      --orange-dark: #d00000;
-      --navy: #0d1b2a;
-      --navy-soft: #1b263b;
+      --green: #4CB050;
+      --green-light: #69c46d;
+      --green-dark: #052F11;
+      --green-mid: #1a5c2a;
+      --navy: #031a0a;
+      --navy-soft: #0a2e14;
       --text: #f8f9fa;
       --text-muted: rgba(248, 249, 250, 0.72);
       --card: rgba(255, 255, 255, 0.08);
@@ -55,9 +56,9 @@
       inset: 0;
       z-index: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232, 93, 4, 0.35), transparent 60%),
-        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(208, 0, 0, 0.2), transparent 50%),
-        linear-gradient(180deg, #0d1b2a 0%, #1b263b 50%, #0d1b2a 100%);
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(76, 176, 80, 0.28), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(5, 47, 17, 0.55), transparent 50%),
+        linear-gradient(180deg, #031a0a 0%, #0a2e14 50%, #052F11 100%);
     }
 
     .bg::after {
@@ -98,7 +99,7 @@
     .logo-glow {
       position: absolute;
       inset: 18% 8%;
-      background: radial-gradient(ellipse at center, rgba(232, 93, 4, 0.35), transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(76, 176, 80, 0.35), transparent 70%);
       filter: blur(18px);
       z-index: 0;
       animation: logo-glow 4s ease-in-out infinite;
@@ -124,7 +125,7 @@
       position: absolute;
       inset: -2px;
       border-radius: 22px;
-      background: linear-gradient(135deg, var(--orange-light), var(--orange), var(--orange-dark));
+      background: linear-gradient(135deg, var(--green-light), var(--green), var(--green-dark));
       z-index: -1;
     }
 
@@ -177,9 +178,9 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--orange-light);
-      background: rgba(232, 93, 4, 0.12);
-      border: 1px solid rgba(232, 93, 4, 0.25);
+      color: var(--green-light);
+      background: rgba(76, 176, 80, 0.12);
+      border: 1px solid rgba(76, 176, 80, 0.3);
       padding: 0.3rem 0.75rem;
       border-radius: 999px;
     }
@@ -220,7 +221,7 @@
 
     .link-btn:hover {
       background: var(--card-hover);
-      border-color: rgba(232, 93, 4, 0.4);
+      border-color: rgba(76, 176, 80, 0.45);
       transform: translateY(-2px);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     }
@@ -230,12 +231,12 @@
     }
 
     .link-btn.primary {
-      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
       border-color: transparent;
     }
 
     .link-btn.primary:hover {
-      background: linear-gradient(135deg, var(--orange-light), var(--orange));
+      background: linear-gradient(135deg, var(--green-light), var(--green));
       border-color: transparent;
     }
 
@@ -292,7 +293,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--orange-light);
+      color: var(--green-light);
       margin-bottom: 0.75rem;
     }
 
@@ -314,7 +315,7 @@
       content: "✓";
       position: absolute;
       left: 0;
-      color: var(--orange);
+      color: var(--green);
       font-weight: 700;
       font-size: 0.75rem;
     }
@@ -344,7 +345,7 @@
     .social a:hover {
       transform: translateY(-2px) scale(1.05);
       background: var(--card-hover);
-      border-color: rgba(232, 93, 4, 0.4);
+      border-color: rgba(76, 176, 80, 0.45);
     }
 
     .social svg {
@@ -371,7 +372,7 @@
     }
 
     .footer a {
-      color: var(--orange-light);
+      color: var(--green-light);
       text-decoration: none;
     }
 
@@ -383,6 +384,43 @@
       margin-top: 1.25rem;
       font-size: 0.72rem;
       opacity: 0.7;
+    }
+
+    .partners {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s ease 0.6s both;
+    }
+
+    .partners-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .partners-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 0.85rem 1.25rem;
+      max-width: 240px;
+      width: 100%;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .partners-card img {
+      width: 100%;
+      height: auto;
+      max-height: 88px;
+      object-fit: contain;
+      display: block;
     }
 
     @keyframes fadeUp {
@@ -515,6 +553,18 @@
       <p class="legal">
         <a href="https://www.dpsbrico.it/" target="_blank" rel="noopener noreferrer">dpsbrico.it</a>
       </p>
+      <div class="partners">
+        <span class="partners-label">Partner</span>
+        <div class="partners-card">
+          <img
+            src="partner-logos.png"
+            alt="kualiti e VERAPRO"
+            width="240"
+            height="120"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </footer>
   </main>
 </body>
